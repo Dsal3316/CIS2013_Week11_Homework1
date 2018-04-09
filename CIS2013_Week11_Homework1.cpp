@@ -9,22 +9,26 @@ class car
 		string color;
 		string make;
 		string model;
-		string year;
+		int year;
 		int speed=0;
 		
 	public:
 	
-		string getColor(){
-			return color;
+		void getColor(){
+			cout<< "Please selct a color: " << endl;
+			cin>> color;
 		}
-		string getMake(){
-			return make;
+		void getMake(){
+			cout << "Please select a make: " << endl;
+			cin>> make;
 		}
-		string getModel(){
-			return model;
+		void getModel(){
+			cout << "Please select a model: " << endl;
+			cin>> model;
 		}
-		string getYear(){
-			return year;
+		void getYear(){
+			cout << "Please select a year: " << endl;
+			cin>> year;
 		}
 		
 		void print(){
@@ -36,10 +40,10 @@ class car
 
 int main(){
 	
-	char option;
+	
 	int c,m,o,y,s,S,p;
 	
-	car userCar;
+	car car;
 	cout <<"Select an action: "<< endl;
 	cout <<"set color(c) "<< endl;
 	cout <<"set make(m) "<< endl;
@@ -49,23 +53,12 @@ int main(){
 	cout <<"stop car(S) "<< endl;
 	cout << "print(p) "<<endl;
 	
-	cin >> option;
+	car.getColor();
+	car.getMake();
+	car.getModel();
+	car.getYear();
+	car.print();
 	
-	if option==c{
-		getColor;
-	}
-	else if option==m{
-		getMake;
-	}
-	else if option==o{
-		getModel;
-	}
-	else if option==y{
-		getYear;
-	}
-	else if option==p{
-		print;
-	}
 	
 	
 	return 0;
