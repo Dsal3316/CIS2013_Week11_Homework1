@@ -30,6 +30,9 @@ class car
 
 int main(){
 	
+	char option;
+	
+	car userCar;
 	cout <<"Select an action: "<< endl;
 	cout <<"set color(c) "<< endl;
 	cout <<"set make(m) "<< endl;
@@ -39,6 +42,9 @@ int main(){
 	cout <<"stop car(S) "<< endl;
 	cout << "print(p) "<<endl;
 	
+	cin>> option;
+	
+	void set();
 	
 	
 	return 0;
