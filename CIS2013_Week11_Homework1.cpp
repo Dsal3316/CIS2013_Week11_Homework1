@@ -5,12 +5,25 @@ using namespace std;
 
 class car
 {
+	private:
+		int color;
+		int make;
+		int model;
+		int year;
+		int speed=0;
+		
 	public:
-	int color;
-	int make;
-	int model;
-	int year;
-	int speed=0;
+	
+		void set(int c, int m, int o, int y){
+			color = c;
+			make=m;
+			model=o;
+			year=y;
+		}
+		
+		void print(){
+			cout << year << color << make << model <<" is traviling at " << speed << "mph"<< endl;
+		}
 };
 
 
@@ -18,6 +31,7 @@ class car
 int main(){
 	
 	cout <<"Select an action: "<< endl;
+	cout <<"set color(c) "<< endl;
 	cout <<"set make(m) "<< endl;
 	cout <<"set model(o) "<< endl;
 	cout <<"set year(y) "<< endl;
