@@ -32,7 +32,7 @@ class car
 		}
 		
 		void print(){
-			cout << year << color << make << model <<" is traviling at " << speed << "mph"<< endl;
+			cout << year<< " " << color<< " " << make<< " " << model <<" is traviling at " << speed << "mph"<< endl;
 		}
 };
 
