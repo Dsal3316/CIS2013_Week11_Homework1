@@ -6,19 +6,25 @@ using namespace std;
 class car
 {
 	private:
-		int color;
-		int make;
-		int model;
-		int year;
+		string color;
+		string make;
+		string model;
+		string year;
 		int speed=0;
 		
 	public:
 	
-		void set(int c, int m, int o, int y){
-			color = c;
-			make=m;
-			model=o;
-			year=y;
+		string getColor(){
+			return color;
+		}
+		string getMake(){
+			return make;
+		}
+		string getModel(){
+			return model;
+		}
+		string getYear(){
+			return year;
 		}
 		
 		void print(){
@@ -31,6 +37,7 @@ class car
 int main(){
 	
 	char option;
+	int c,m,o,y,s,S,p;
 	
 	car userCar;
 	cout <<"Select an action: "<< endl;
@@ -42,9 +49,23 @@ int main(){
 	cout <<"stop car(S) "<< endl;
 	cout << "print(p) "<<endl;
 	
-	cin>> option;
+	cin >> option;
 	
-	void set();
+	if option==c{
+		getColor;
+	}
+	else if option==m{
+		getMake;
+	}
+	else if option==o{
+		getModel;
+	}
+	else if option==y{
+		getYear;
+	}
+	else if option==p{
+		print;
+	}
 	
 	
 	return 0;
