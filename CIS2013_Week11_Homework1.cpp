@@ -49,7 +49,7 @@ class car
 				cout <<"     Please turn key in ignition to start car (s) " << endl;
 			}
 			else{
-				speed +10;
+				speed+=10;
 				cout <<"    Your current speed is " << speed << " MPH " << endl;
 			}
 			if (speed >= 100){
@@ -58,7 +58,7 @@ class car
 		}
 		void brake(){
 			if (speed >0){
-				speed-5;
+				speed-=5;
 				cout <<"     The car slows to " << speed << " MPH " << endl;
 			}
 			else {
@@ -119,10 +119,7 @@ int main(){
 	car.getModel();
 	car.getYear();
 	car.print();
-	//car.accellerate();
-	//car.brake();
-	//car.turnLeft();
-	//car.turnRight();
+	
 	
 	do{
 		
