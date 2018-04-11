@@ -50,7 +50,43 @@ class car
 				cout <<"     Car is at max speed engine damage iminit if pushed harder" << endl;
 			}
 		}
-			
+		void brake(){
+			if (speed >0){
+				speed-5;
+				cout <<"     The car slows to " << speed << " MPH " << endl;
+			}
+			else {
+				cout<<"       The car has come to a stop please start back up to continue driving (s)" << endl;
+			}
+		}
+		void turnLeft(){
+			if (speed==0){
+				cout<<"       Thats funny cars have to be moving forward to turn, Please start (s)" << endl;
+			}
+			else if (speed>25){
+				cout<< "      You are going too fast to make a turn please slow down (S) " << endl;
+			}
+			else{
+				for(int i=speed; i >=15; i-=5)
+					speed=i;
+				cout<<"       Turning left" << endl;
+				cout<<"       Your current speed is now " << speed << " MPH " << endl;
+			}
+		}
+		void turnRight(){
+			if (speed==0){
+				cout<<"       Thats funny cars have to be moving forward to turn, Please start (s)" << endl;
+			}
+			else if (speed>25){
+				cout<< "      You are going too fast to make a turn please slow down (S) " << endl;
+			}
+			else{
+				for(int i=speed; i >=15; i-=5)
+					speed=i;
+				cout<<"       Turning right" << endl;
+				cout<<"       Your current speed is now " << speed << " MPH " << endl;
+			}
+		}	
 		
 };
 
