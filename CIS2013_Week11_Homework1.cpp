@@ -95,7 +95,8 @@ class car
 int main(){
 	
 	
-	int c,m,o,y,s,S,p;
+	int c,m,o,y,s,S,p,L,R;
+	char action;
 	
 	car car;
 	cout <<"Select an action: "<< endl;
@@ -113,7 +114,49 @@ int main(){
 	car.getYear();
 	car.print();
 	
-	//do{
+	do{
+		
+		cout<<"Select an action: " << endl;
+		cout <<"set color(c) "<< endl;
+		cout <<"set make(m) "<< endl;
+		cout <<"set model(o) "<< endl;
+		cout <<"set year(y) "<< endl;
+		cout<<"Start car (s): " << endl;
+		cout<<"Stop car (S): " << endl;
+		cout<<"Turn left (L): " << endl;
+		cout<<"Turn right (R): " << endl;
+		cin>> action;
+		
+		switch(action){
+			case 'c':
+			getColor;
+			break;
+			case 'm':
+			getMake;
+			break;
+			case 'o':
+			getModel;
+			break;
+			case 'y':
+			getYear;
+			break;
+			case 's':
+			accellerate;
+			break;
+			case 'S':
+			brake;
+			break;
+			case 'L':
+			turnLeft;
+			break;
+			case 'R':
+			turnRight;
+			break;
+			default :
+			cout<<" Invalid entry " << endl;
+			
+			
+		
 	
 	
 	
