@@ -36,17 +36,23 @@ class car
 		}
 		void start(){
 			if (speed==0){
-				cout<< "     Please turn key in ignition to start car (s) " << endl;
+				speed = 10;
+				cout<<"      You are traveling at " << speed << " MPH" << endl;
 			}
 			else {
-				cout<<"      You are traveling at " << speed << " MPH" << endl;
+				cout<< "     Please turn key in ignition to start car (s) " << endl;
+				
 			}
 		}
 		void accellerate(){
 			if(speed==0){
 				cout <<"     Please turn key in ignition to start car (s) " << endl;
 			}
-			else if (speed >= 100){
+			else{
+				speed +10;
+				cout <<"    Your current speed is " << speed << " MPH " << endl;
+			}
+			if (speed >= 100){
 				cout <<"     Car is at max speed engine damage iminit if pushed harder" << endl;
 			}
 		}
@@ -95,7 +101,7 @@ class car
 int main(){
 	
 	
-	int c,m,o,y,s,S,p,L,R;
+	int c,m,o,y,s,S,p,L,R,a;
 	char action;
 	
 	car car;
@@ -113,10 +119,10 @@ int main(){
 	car.getModel();
 	car.getYear();
 	car.print();
-	car.accellerate();
-	car.brake();
-	car.turnLeft();
-	car.turnRight();
+	//car.accellerate();
+	//car.brake();
+	//car.turnLeft();
+	//car.turnRight();
 	
 	do{
 		
@@ -127,6 +133,8 @@ int main(){
 		cout <<"set year(y) "<< endl;
 		cout<<"Start car (s): " << endl;
 		cout<<"Stop car (S): " << endl;
+		cout<<"Accelerate (a): "<<endl;
+		
 		cout<<"Turn left (L): " << endl;
 		cout<<"Turn right (R): " << endl;
 		cin>> action;
@@ -145,10 +153,13 @@ int main(){
 			car.getYear();
 			break;
 			case 's':
-			car.accellerate();
+			car.start();
 			break;
 			case 'S':
 			car.brake();
+			break;
+			case 'a':
+			car.accellerate();
 			break;
 			case 'L':
 			car.turnLeft();
