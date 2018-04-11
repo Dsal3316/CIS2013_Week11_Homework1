@@ -34,6 +34,24 @@ class car
 		void print(){
 			cout << year<< " " << color<< " " << make<< " " << model <<" is traviling at " << speed << "mph"<< endl;
 		}
+		void start(){
+			if (speed==0){
+				cout<< "     Please turn key in ignition to start car (s) " << endl;
+			}
+			else {
+				cout<<"      You are traveling at " << speed << " MPH" << endl;
+			}
+		}
+		void accellerate(){
+			if(speed==0){
+				cout <<"     Please turn key in ignition to start car (s) " << endl;
+			}
+			else if (speed >= 100){
+				cout <<"     Car is at max speed engine damage iminit if pushed harder" << endl;
+			}
+		}
+			
+		
 };
 
 
@@ -58,6 +76,8 @@ int main(){
 	car.getModel();
 	car.getYear();
 	car.print();
+	
+	//do{
 	
 	
 	
