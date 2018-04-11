@@ -113,6 +113,10 @@ int main(){
 	car.getModel();
 	car.getYear();
 	car.print();
+	car.accellerate();
+	car.brake();
+	car.turnLeft();
+	car.turnRight();
 	
 	do{
 		
@@ -129,31 +133,33 @@ int main(){
 		
 		switch(action){
 			case 'c':
-			getColor;
+			car.getColor;
 			break;
 			case 'm':
-			getMake;
+			car.getMake;
 			break;
 			case 'o':
-			getModel;
+			car.getModel;
 			break;
 			case 'y':
-			getYear;
+			car.getYear;
 			break;
 			case 's':
-			accellerate;
+			car.accellerate;
 			break;
 			case 'S':
-			brake;
+			car.brake;
 			break;
 			case 'L':
-			turnLeft;
+			car.turnLeft;
 			break;
 			case 'R':
-			turnRight;
+			car.turnRight;
 			break;
 			default :
 			cout<<" Invalid entry " << endl;
+		}
+	}
 			
 			
 		
